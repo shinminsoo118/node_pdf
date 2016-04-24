@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>선택 페이지</title>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("input[name='selected']").click(function () {
+                var val = $(this).val();
+
+                if (val == "teacher1") {
+                    location.href = "teacher.jsp?uID=" + val;
+                } else {
+                    location.href = "student.jsp?uID=" + val;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="radio" name="selected" id="teacher" value="teacher1" /> 선생님
+    <input type="radio" name="selected" id="student" value="student1" /> 학생1
+    <input type="radio" name="selected" id="student" value="student2" /> 학생2
+    <input type="radio" name="selected" id="student" value="student3" /> 학생3
+    <input type="radio" name="selected" id="student" value="student4" /> 학생4
+    <input type="radio" name="selected" id="student" value="student5" /> 학생5
+    <input type="radio" name="selected" id="student" value="student6" /> 학생6
+</body>
+</html>
